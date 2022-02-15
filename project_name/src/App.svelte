@@ -1,31 +1,29 @@
 <script>
-	export let name;
+	import {count} from './components/stor';
+	import AddPr from './components/addPr.svelte';
+	let a = 10;
+	let b = {
+		t: 1,
+		s: 3,
+	};
+
+	console.log(b);
 </script>
 
-<main>
-	<h1>Привет {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	
-</main>
+<div>
+	<form action="">
+		Store:{$count}
+		<input
+			type="button"
+			value="+"
+			on:click={() => count.update((item) => (item += 1))}
+		/>
+	</form>
+	<AddPr my_text="qwe" />
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	:global(body) {
+		background: #153;
 	}
 </style>

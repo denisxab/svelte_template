@@ -152,7 +152,7 @@ class Main {
 	Entry() {
 		return {
 			// Его мы подключаем в `index.html`
-			main: path.resolve(__dirname, `${this.PathSrc}/main.ts`),
+			main: path.resolve(__dirname, `${this.PathSrc}/main.js`),
 			// Путь к другому файлу для компиляции
 			// other: path.resolve(__dirname, `src/other.tsx`)
 		};
